@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "async": "^2.4.0",
-    "node-zopfli": "^2.0.2",
+    "node-zopfli": "github:youurayy/node-zopfli",
     "webpack-sources": "^1.0.1"
   },
   "devDependencies": {
