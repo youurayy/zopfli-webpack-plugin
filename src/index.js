@@ -1,6 +1,6 @@
 import url from 'url';
 import async from 'async';
-import zopfli from 'node-zopfli';
+import { gzip } from '@gfx/zopfli';
 import RawSource from 'webpack-sources/lib/RawSource';
 
 class ZopfliPlugin {
@@ -20,7 +20,7 @@ class ZopfliPlugin {
         blocksplittingmax: options.blocksplittingmax ? options.blocksplittingmax : 15,
       };
       this.algorithm = (content, options, fn) => {
-        zopfli.gzip(content, options, fn);
+        gzip(content, options, fn);
       };
     } else if (!this.algorithm) {
       throw new Error('Algorithm incorrect or not found');
